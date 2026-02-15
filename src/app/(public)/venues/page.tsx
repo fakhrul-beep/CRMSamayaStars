@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { useState } from 'react';
 import { venues } from '@/lib/venues';
@@ -17,8 +19,8 @@ export default function VenuesPage() {
   });
 
   return (
-    <main className="min-h-screen bg-neutral-50 pt-24">
-      <section className="mx-auto max-w-container px-6 pb-16">
+    <main className="min-h-screen pt-32 pb-16">
+      <section className="mx-auto max-w-container px-6">
         <header className="mb-8 space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
             CURATED VENUES

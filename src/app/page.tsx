@@ -5,29 +5,8 @@ import { venues } from '@/lib/venues';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-neutral-50">
-      <header className="fixed inset-x-0 top-0 z-20 border-b border-neutral-200 bg-neutral-50/90 backdrop-blur">
-        <div className="mx-auto flex max-w-container items-center justify-between px-6 py-4">
-          <div className="text-sm font-semibold tracking-[0.2em] text-neutral-800">
-            SAMAYA STARS
-          </div>
-          <nav className="hidden items-center gap-8 text-sm text-neutral-700 md:flex">
-            <Link href="/venues">Explore Venues</Link>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#about">About</a>
-            <a href="#consultation" className="text-gold">
-              For Venues
-            </a>
-          </nav>
-          <div className="hidden md:block">
-            <Link href="/venues">
-              <Button size="sm">Request Consultation</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      <section className="bg-gradient-to-b from-primary via-primary/95 to-primary/90 pt-28 text-neutral-50 md:pt-32">
+    <main className="min-h-screen">
+      <section data-nav-theme="dark" className="bg-gradient-to-b from-primary via-primary/95 to-primary/90 pt-32 pb-20 text-neutral-50 md:pt-40 md:pb-32">
         <div className="mx-auto flex max-w-container flex-col gap-10 px-6 pb-20 md:flex-row md:items-center md:pb-28">
           <div className="max-w-xl space-y-6">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
@@ -49,6 +28,7 @@ export default function HomePage() {
                   Take Venue Quiz
                 </Button>
               </Link>
+            </div>
             <div className="mt-4 flex flex-wrap gap-4 text-xs text-neutral-300 md:text-sm">
               <span>✓ Independent Mystery Audit</span>
               <span>✓ Structured Evaluation Framework</span>
@@ -76,7 +56,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="venues" className="bg-neutral-50 py-16 md:py-20">
+      <section id="venues" data-nav-theme="light" className="bg-neutral-50 py-16 md:py-20">
         <div className="mx-auto max-w-container px-6">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>

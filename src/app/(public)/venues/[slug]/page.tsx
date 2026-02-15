@@ -4,17 +4,18 @@ import { StarBadge } from '@/components/brand/StarBadge';
 import { ConsultationForm } from './consultation-form';
 
 interface VenueDetailPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function VenueDetailPage({ params }: VenueDetailPageProps) {
-  const venue = getVenueBySlug(params.slug);
+export default async function VenueDetailPage({ params }: VenueDetailPageProps) {
+  const { slug } = await params;
+  const venue = getVenueBySlug(slug);
 
   if (!venue) return notFound();
 
   return (
-    <main className="min-h-screen bg-neutral-50 pt-20 md:pt-24">
-      <section className="bg-primary text-neutral-50">
+    <main className="min-h-screen pt-20">
+      <section className="bg-primary text-neutral-50 pt-8 md:pt-12">
         <div className="mx-auto max-w-container px-0 pb-8 pt-6 md:px-6 md:pb-10">
           <div className="grid gap-6 md:grid-cols-[3fr,2fr] md:items-end">
             <div className="relative">
